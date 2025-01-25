@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    <title>test</title>
+</head>
+
+<body>
+    <div class="w-full flex flex-col items-center">
+        <!--start header-->
+        <header class="w-full">
+            <nav class="bg-blue-950 border-gray-200 px-4 lg:px-6 py-2.5 ">
+                <div class="flex flex-nowrapwrap justify-between items-center mx-auto max-w-screen-xl ">
+
+                    <div class="flex items-center lg:order-2">
+
+                        <a href="/register/"
+                            class="text-white  hover:text-gray-300 hover:border-white focus:ring-4 focus:border focus:border-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-nowrap">فرم
+                            درخواست خوابگاه</a>
+                         <a href="/follow"
+                            class="text-white  hover:text-gray-300 hover:border-white focus:ring-4 focus:border focus:border-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-nowrap">فرم
+                            پیگیری درخواست</a>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <!--end of header-->
+        <!--start slider-->
+        <h1 class="font-bold text-2xl my-10">عنوان خبر</h1>
+
+
+        <div class="relative w-full max-w-2xl overflow-hidden bg-blue">
+            <!-- Slides -->
+            <div id="slider" class="flex transition-transform duration-500">
+                <img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 1" class="w-full flex-shrink-0">
+                <img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 1" class="w-full flex-shrink-0">
+                <img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 1" class="w-full flex-shrink-0">
+            </div>
+
+            <!-- Controls -->
+            <button id="prev"
+                class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                </svg>
+
+            </button>
+            <button id="next"
+                class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+
+            </button>
+
+            <!-- Indicators -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button class="w-3 h-3 bg-gray-500 rounded-full focus:outline-none" data-index="0"></button>
+                <button class="w-3 h-3 bg-gray-500 rounded-full focus:outline-none" data-index="1"></button>
+                <button class="w-3 h-3 bg-gray-500 rounded-full focus:outline-none" data-index="2"></button>
+            </div>
+
+            <!--end of slider-->
+
+        </div>
+    </div>
+    
+    <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
+          <div class="max-w-xl">
+            <h2 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">Meet our leadership</h2>
+            <p class="mt-6 text-lg/8 text-gray-600">We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients.</p>
+          </div>
+          <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+            <li>
+              <div class="flex items-center gap-x-6">
+                  <img class="size-16 rounded-full" src="{% static 'assest/10taye%20dvm.png' %}" alt="">
+                <div>
+                  <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
+                  <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                </div>
+              </div>
+            </li>
+            <li>
+                <div class="flex items-center gap-x-6">
+                  <img class="size-16 rounded-full" src="{% static 'assest/10taye%20dvm.png' %}" alt="">
+
+                  <div>
+                    <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
+                    <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center gap-x-6">
+                  <img class="size-16 rounded-full" src="{% static 'assest/10taye%20dvm.png' %}" alt="">
+                  <div>
+                    <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
+                    <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                  </div>
+                </div>
+              </li>
+      
+            <!-- More people... -->
+          </ul>
+        </div>
+      </div>
+      
+
+
+    <div class=" w-full mt-20  flex flex-col items-center justify-center">
+
+        
+
+
+        <footer class="w-full bg-blue-950 ">
+            <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                <div class="md:flex md:justify-between">
+                    <div class="mb-6 md:mb-0">
+
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources
+                            </h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                                </li>
+                                <li>
+                                    <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us
+                            </h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col justify-center ">
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                            <iframe
+                                class="max-w-40 max-h-40"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.0843669921946!2d52.35405986117578!3d36.45551737246249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8fbd527040a94b%3A0xe9dd3370dd7e561f!2z2K_Yp9mG2LTar9in2Ycg2KrYrti12LXbjCDZgdmG2KfZiNix24zigIzZh9in24wg2YbZiNuM2YYg2KLZhdmE!5e0!3m2!1sfa!2s!4v1737664744386!5m2!1sfa!2s"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="#" class="hover:underline">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+
+
+
+<script>
+    const slider = document.getElementById('slider');
+    const slides = slider.children;
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const indicators = document.querySelectorAll('[data-index]');
+
+    let currentIndex = 0;
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('bg-gray-800', index === currentIndex);
+            indicator.classList.toggle('bg-gray-500', index !== currentIndex);
+        });
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+        updateSlider();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        updateSlider();
+    });
+
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', () => {
+            currentIndex = parseInt(indicator.getAttribute('data-index'));
+            updateSlider();
+        });
+    });
+
+    // Initialize the slider
+    updateSlider();
+</script>
+
+</body>
+
+
+
+</html>
