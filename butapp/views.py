@@ -5,7 +5,7 @@ from django.contrib import messages
 
 
 def index(request):
-    buts = But.objects.all()
+    buts = But.objects.prefetch_related('photos').all()
     return render(request, 'homepage.html', {'buts': buts})
 
 
