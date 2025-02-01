@@ -40,3 +40,8 @@ def follow(request):
             Q(student_code=student_code) | Q(nation_code=nation_code)).values_list('status').all()
         return render(request, 'follow_request.html', {'student': student})
     return render(request, 'follow_request.html')
+
+
+def detail(request, but_id):
+    but = But.objects.get(id=but_id)
+    return render(request, 'detail.html', {'but': but})

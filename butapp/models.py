@@ -3,8 +3,8 @@ from django_jalali.db import models as jalali_models
 
 
 class Gender(models.TextChoices):
-    male = 'male', 'پسرونه'
-    female = 'female', 'دخترونه'
+    male = 'پسرونه', 'پسرونه'
+    female = 'دخترونه', 'دخترونه'
 
 
 class But(models.Model):
