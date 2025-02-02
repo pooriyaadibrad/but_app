@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    <title>test</title>
+    <title>khabgah</title>
 </head>
 
 <body>
@@ -42,7 +42,9 @@
             <!-- Slides -->
             <div id="slider" class="flex transition-transform duration-500">
                                                   {% for photo in but.photos.all %}
-                <img src="{{ photo.image.url }}" alt="Slide 1" class="w-full flex-shrink-0">
+    <img src="{{ photo.image.url }}"
+         alt="Slide 1"
+         class="w-full flex-shrink-0 rounded-3xl object-cover">
             <!-- Controls -->
             <button id="prev"
                 class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-700">
@@ -73,24 +75,45 @@
         </div>
     </div>
 
-    <div class="bg-white py-24 sm:py-32">
-        <div class="max-w-xl">
-            <p class="mt-6 text-lg/8 text-gray-600">{{ but.gender_type }}</p>
+<div class="bg-white py-24 sm:py-32 px-6">
+    <div class="mx-auto max-w-7xl grid gap-6 lg:gap-12">
+
+        <!-- جنسیت، ظرفیت کل و ظرفیت باقی‌مانده در یک ردیف کنار هم -->
+        <div class="grid grid-cols-3 gap-6">
+            <div class="border border-black p-6 rounded-2xl shadow-lg bg-gray-100 flex flex-col items-center justify-center h-28">
+                <p class="text-lg font-semibold text-gray-900">جنسیت</p>
+                <p class="text-gray-600">{{ but.gender_type }}</p>
+            </div>
+
+            <div class="border border-black p-6 rounded-2xl shadow-lg bg-gray-100 flex flex-col items-center justify-center h-28">
+                <p class="text-lg font-semibold text-gray-900">ظرفیت کل</p>
+                <p class="text-gray-600">{{ but.len_member }}</p>
+            </div>
+
+            <div class="border border-black p-6 rounded-2xl shadow-lg bg-gray-100 flex flex-col items-center justify-center h-28">
+                <p class="text-lg font-semibold text-gray-900">ظرفیت باقی‌مانده</p>
+                <p class="text-gray-600">{{ remaining_capacity }}</p>
+            </div>
         </div>
-        <div class="max-w-xl">
-            <p class="mt-6 text-lg/8 text-gray-600">{{ but.len_member }}</p>
+
+        <!-- آدرس و توضیحات در یک ردیف دیگر با فضای بیشتر -->
+        <div class="grid grid-cols-2 gap-6">
+            <div class="border border-black p-8 rounded-2xl shadow-lg bg-gray-100">
+                <p class="text-lg font-semibold text-gray-900" dir="rtl">آدرس</p>
+                <p class="text-gray-600" dir="rtl">{{ but.address }}</p>
+            </div>
+
+            <div class="border border-black p-8 rounded-2xl shadow-lg bg-gray-100">
+                <p class="text-lg font-semibold text-gray-900" dir="rtl">توضیحات</p>
+                <p class="text-gray-600" dir="rtl">{{ but.description }}</p>
+            </div>
         </div>
-        <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
-          <div class="max-w-xl">
-            <p class="mt-6 text-lg/8 text-gray-600">{{ but.description }}</p>
-          </div>
-        </div>
-        <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
-          <div class="max-w-xl">
-            <p class="mt-6 text-lg/8 text-gray-600">{{ but.address }}</p>
-          </div>
-        </div>
-      </div>
+
+    </div>
+</div>
+
+
+
 
 
 
@@ -122,13 +145,13 @@
                         </h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <p>جناب آقای ابراهیم لطفی</p>
+                                <p dir="rtl">جناب آقای ابراهیم لطفی</p>
                             </li>
                             <li class="mb-4">
-                                <p>کارشناس امور خوابگاه ها</p>
+                                <p dir="rtl">کارشناس امور خوابگاه ها</p>
                             </li>
                             <li class="mb-4">
-                                <p>۰۱۱-۴۴۴۴۲۱۳۵ (داخلی ۱۴۹) <br> ۰۹۱۱-۸۵۳۴۶۷۷</p>
+                                <p dir="rtl">۰۱۱-۴۴۴۴۲۱۳۵ (داخلی ۱۴۹) <br> ۰۹۱۱-۸۵۳۴۶۷۷</p>
                             </li>
                         </ul>
                     </div>
@@ -140,10 +163,10 @@
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">آدرس دفتر مرکزی خوابگاه ها</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white" dir="rtl">آدرس دفتر مرکزی خوابگاه ها</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <p>آمل, خیابان طالقانی, اباذر ۳۵ - ساختمان مرکزی</p>
+                                <p dir="rtl">آمل, خیابان طالقانی, اباذر ۳۵ - ساختمان مرکزی</p>
                             </li>
                         </ul>
                     </div>
@@ -155,7 +178,7 @@
                 </div>
             </div>
         </div>
-    </footer>follow
+    </footer>
     </div>
 </body>
 

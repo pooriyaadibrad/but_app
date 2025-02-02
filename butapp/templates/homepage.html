@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    <title>test</title>
+    <title>khabgah</title>
 </head>
 
 <body>
@@ -33,15 +33,15 @@
         </header>
         <!--end of header-->
         <!--start slider-->
-        <h1 class="font-bold text-2xl my-10">عنوان خبر</h1>
+        <h1 class="font-bold text-2xl my-10">تصاویر خوابگاه ها</h1>
 
 
         <div class="relative w-full max-w-2xl overflow-hidden bg-blue">
             <!-- Slides -->
             <div id="slider" class="flex transition-transform duration-500">
-                <img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 1" class="w-full flex-shrink-0">
-                <img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 1" class="w-full flex-shrink-0">
-                <img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 1" class="w-full flex-shrink-0">
+<img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 1" class="w-full flex-shrink-0 rounded-full object-cover">
+<img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 2" class="w-full flex-shrink-0 rounded-full object-cover">
+<img src="{% static 'assest/10taye%20dvm.png' %}" alt="Slide 3" class="w-full flex-shrink-0 rounded-full object-cover">
             </div>
 
             <!-- Controls -->
@@ -77,8 +77,8 @@
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
           <div class="max-w-xl">
-            <h2 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">درباره خوابگاه ها</h2>
-            <p class="mt-6 text-lg/8 text-gray-600">فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان فلان</p>
+            <h2 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl" dir="rtl">درباره خوابگاه ها</h2>
+            <p class="mt-6 text-lg/8 text-gray-600" dir="rtl">خوابگاه‌های ما با ۵ شعبه فعال و امکانات مدرن، محیطی امن و راحت را برای اقامت شما فراهم می‌کنند. با سابقه‌ای درخشان و استانداردهای بالای سه ستاره، در آینده نزدیک گسترش خواهیم یافت تا پذیرای تعداد بیشتری از مهمانان باشیم.</p>
           </div>
           <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
             {% for but in buts%}
