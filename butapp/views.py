@@ -44,4 +44,5 @@ def follow(request):
 
 def detail(request, but_id):
     but = But.objects.get(id=but_id)
-    return render(request, 'detail.html', {'but': but})
+    remaining_capacity = but.remaining_capacity()
+    return render(request, 'detail.html', {'but': but, 'remaining_capacity': remaining_capacity})

@@ -25,6 +25,10 @@ class But(models.Model):
             return f'{self.name}----- پسرونه'
         return f'{self.name}----- نامشخص'
 
+    def remaining_capacity(self):
+        accepted_requests = self.requests.filter(status='درخواست قبول شده : وضعیت درخواست ثبت نام شما در مرحله قبول شده می‌باشد ، لطفا در زمان اعلامی از طرف دانشگاه نسبت به نهایی کردن ثبت نام خود اقدام نمایید').count()
+        return self.len_member - accepted_requests
+
 
 class Image(models.Model):
     image = models.ImageField(upload_to='images/')
@@ -37,7 +41,7 @@ class StudentDormitory(models.Model):
         rejected = 'درخواست رد شده : درخواست شما از طرف کارشناس امور خوابگاه ها رد شده است ، جهت پیگیری در تایم اداری با شماره ۰۱۱۴۴۴۴۲۱۳۵ با داخلی ۱۴۹ تماس حاصل فرمایید', 'رد شده'
         confirm = 'درخواست قبول شده : وضعیت درخواست ثبت نام شما در مرحله قبول شده می‌باشد ، لطفا در زمان اعلامی از طرف دانشگاه نسبت به نهایی کردن ثبت نام خود اقدام نمایید', 'تایید شده'
 
-    but = models.ForeignKey(But, on_delete=models.CASCADE, null=True, blank=True , verbose_name='خوابگاه')
+    but = models.ForeignKey(But, on_delete=models.CASCADE, null=True, blank=True , verbose_name='خوابگاه', related_name="requests")
     first_name = models.CharField(max_length=100, verbose_name='اسم')
     last_name = models.CharField(max_length=100, verbose_name='نام خانوادگی')
     student_code = models.CharField(max_length=20, verbose_name='شماره دانشجویی')
