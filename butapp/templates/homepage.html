@@ -84,9 +84,12 @@
             {% for but in buts%}
               <li>
               <div class="flex items-center gap-x-6">
-                                  {% for photo in but.photos.all %}
-                  <img class="size-16 rounded-full" src="{{ photo.image.url }}" alt="">
-                                  {% endfor %}
+{% with but.photos.all.first as photo %}
+    {% if photo %}
+        <img class="size-16 rounded-full" src="{{ photo.image.url }}" alt="">
+    {% endif %}
+{% endwith %}
+
                 <div>
                   <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">{{ but.name }}</h3>
                   <a href="{% url 'detail' but.id %}" class="text-sm/6 font-semibold text-indigo-600">صحفه خوابگاه</a>
