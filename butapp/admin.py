@@ -15,16 +15,19 @@ class StudentDormitoryAdmin(admin.ModelAdmin):
         'first_name',
         'last_name',
         'student_code',
+        'nation_code',
         'status',
         'grade',
         'field',
         'gender',
+        'but__name',
         'date',
     )
     search_fields = (
         'first_name',
         'last_name',
         'student_code',
+        'nation_code',
         'nation_code',
         'mobile_number',
         'parent_mobile_number',
@@ -40,10 +43,12 @@ class StudentDormitoryAdmin(admin.ModelAdmin):
          'first_name',
         'last_name',
         'student_code',
+        'nation_code',
         'status',
         'grade',
         'field',
         'gender',
+        'but__name',
         'date',
     )
     ordering = ('-date',)  # Orders by most recent date first
@@ -57,10 +62,15 @@ class ButAdmin(admin.ModelAdmin):
     list_display_links = ('name', 'len_member', 'gender_type')
     inlines = [ImageAdmin]
 
+class CapacityAdmin(admin.ModelAdmin):
+    list_display = ('number','but__name')
+    list_display_links = ('number','but__name')
 
 
 
 admin.site.register(models.But, ButAdmin)
+admin.site.register(models.HomePageImage)
+admin.site.register(models.CapacityBut, CapacityAdmin)
 admin.site.register(StudentDormitory, StudentDormitoryAdmin)
 admin.site.unregister(Group)
 admin.site.unregister(User)
