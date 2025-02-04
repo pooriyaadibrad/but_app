@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    <title>khabgah</title>
+    <style>
+        ol li {
+            display: flex;
+            align-items: center !important; /* برای هم‌راستا کردن شماره و متن */
+            line-height: 2 !important; /* برای کنترل فاصله بین خطوط */
+        }
+        ol li span {
+            margin-right: 10px; /* فاصله بین شماره و متن */
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="w-full flex flex-col items-center">
+    <!--start header-->
+    <header class="w-full">
+        <nav class="bg-blue-950 border-gray-200 px-4 lg:px-6 py-2.5">
+            <div class="flex flex-nowrapwrap justify-between items-center mx-auto max-w-screen-xl">
+                <div class="flex items-center lg:order-2">
+                    <img class="position: absolute; top: 5px; right: 5px; width: 3px; height: 3px;" src="path_to_your_3x3_logo.png" alt="لوگو">
+                    <a href="/" class="text-white hover:text-gray-300 hover:border-white focus:ring-4 focus:border focus:border-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-nowrap">خانه</a>
+                    <a href="/register/" class="text-white hover:text-gray-300 hover:border-white focus:ring-4 focus:border focus:border-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-nowrap">فرم درخواست خوابگاه</a>
+                    <a href="/follow" class="text-white hover:text-gray-300 hover:border-white focus:ring-4 focus:border focus:border-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-nowrap">فرم پیگیری درخواست</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--start content-->
+    <div class="flex flex-col items-center justify-center bg-gray-100 w-full h-full text-right">
+        <h1 class="font-bold text-2xl my-10">آئین نامه ها و مقررات خوابگاه</h1>
+
+        <!-- قوانین و مقررات خوابگاه -->
+        <div class="w-full max-w-4xl px-6 py-8 bg-white shadow-xl rounded-xl" dir="rtl">
+<BR>
+            <h3 class="font-semibold text-2xl text-gray-700 mb-6">مقررات خوابگاه</h3>
+            <ol class="list-decimal pl-8 space-y-8 text-gray-700 text-lg">
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">1.&nbsp;</span> دانشجو حق واگذاری محل سکونت خود را به دیگری ندارد ولی در صورت لزوم تعویض محل سکونت با اجازه کتبی اداره خوابگاه ها ؛ امکان پذیر خواهد بود.
+
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">2.&nbsp;</span> هر دانشجو موظف به حفظ اموال شخصی خود خواهد بود و مسئولین امور خوابگاه ها در این رابطه هیچ گونه مسئولیتی ندارند.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">3.&nbsp;</span> دانشجویان بهره مند از خوابگاه های دانشجویی متعهد می باشند که پس از پایان هر سال تحصیلی خوابگاه محل سکونت خود را تخلیه نمایند.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">4.&nbsp;</span> دانشجو حق جا به جایی تخت ها و کمدهای داخل اطاق را ندارد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">5.&nbsp;</span> سکونت افراد غیر خوابگاهی (میهمان) در خوابگاه ممنوع است مگر در موارد اضطراری.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">6.&nbsp;</span> نوشتن و نصب عکس و پوستر بر روی درب و دیوار و کمدها ممنوع است.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">7.&nbsp;</span> دانشجو بدون هماهنگی با مسئول خوابگاه حق تعویض اتاق خود را ندارد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">8.&nbsp;</span> مسئولیت حفظ و نگهداری اموال داخل اتاق از قبیل قفل و کمد و درب و .... بر عهده ی اعضای اتاق خواهد بود.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">9.&nbsp;</span> در صورتی که دانشجو قسمتی از ترم تحصیلی را در خوابگاه حضور داشته باشد و از ادامه ی سکونت منصرف شود اجاره بها تا پایان ترم را بدهکار خواهد شد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">10.&nbsp;</span> دانشجو در هنگام تخلیه خوابگاه باید اتاق را کاملاً نظافت نماید و وسایل تحویل گرفته را سالم به سرپرستی تحویل دهد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">11.&nbsp;</span> دانشگاه میتواند غیبت دانشجوی ساکن در خوابگاه را به خانواده وی اطلاع دهد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">12.&nbsp;</span> دانشجویان دختر ساکن در خوابگاه باید برگه خروج و مرخصی را تکمیل نمایند.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">13.&nbsp;</span> استعمال دخانیات در کلیه اماکن دانشگاه از جمله خوابگاه ممنوع می باشد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">14.&nbsp;</span> استفاده از وسایل پر مصرف انرژی مانند هیتر طبخ غذا در اتاق ممنوع بوده و کلیه خسارات وارده با دانشجو می باشد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">15.&nbsp;</span> در صورت بروز مشکل در تاسیسات خوابگاه، دانشجویان باید مراتب را به مسئولین اطلاع دهند.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">16.&nbsp;</span> انجام نظافت اتاق و حفظ بهداشت عمومی بر عهده خود دانشجو می باشد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">17.&nbsp;</span> اسکان در ایام تابستان و عید نوروز بر اساس مقررات خاص دانشگاه است.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">18.&nbsp;</span> در صورت داشتن بیماری خاص، دانشجو باید به مسئول خوابگاه اطلاع دهد.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">19.&nbsp;</span> دانشجویان شاهد و ایثارگر مشمول دریافت تخفیف هزینه اسکان می‌شوند.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">20.&nbsp;</span> دانشجو در صورت فراغت از تحصیل حق استفاده از خوابگاه را ندارد.
+                </li>
+            </ol>
+
+            <BR>
+
+            <h3 class="font-semibold text-2xl text-gray-700 mt-8 mb-6">مقررات عمومی</h3>
+
+            <ol class="list-decimal pl-8 space-y-8 text-gray-700 text-lg">
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">1.&nbsp;</span> ساعت ورود و خروج مجاز دانشجویان بر حسب فصول سال تعیین می‌شود.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">2.&nbsp;</span> به منظور رعایت سکوت، ساعات سکوت عمومی توسط اداره خوابگاه اعلام می‌شود.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">3.&nbsp;</span> بازرسی از اتاق‌ها با مجوز کتبی معاون دانشجویی امکان پذیر است.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">4.&nbsp;</span> استفاده از وسایل سمعی و بصری با رعایت موازین قانونی بلامانع است.
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 font-bold text-blue-600 text-lg">5.&nbsp;</span> دانشجو ملزم به حفظ و نگهداری اموال خوابگاه است.
+                </li>
+            </ol>
+
+        </div>
+
+        <!--end content-->
+    </div>
+    <footer class="w-full bg-blue-950 mt-20">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">دسترسی سریع
+                        </h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="{% url 'terms_and_conditions' %}" class="hover:underline">قوانین و مقررات</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">اخبار</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">تماس با ما
+                        </h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <p>جناب آقای ابراهیم لطفی</p>
+                            </li>
+                            <li class="mb-4">
+                                <p>کارشناس امور خوابگاه ها</p>
+                            </li>
+                            <li class="mb-4">
+                                <p>۰۱۱-۴۴۴۴۲۱۳۵ (داخلی ۱۴۹) <br> ۰۹۱۱-۸۵۳۴۶۷۷</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col justify-center ">
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">لوکیشن</h2>
+                        <iframe class="max-w-40 max-h-40"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.0843669921946!2d52.35405986117578!3d36.45551737246249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8fbd527040a94b%3A0xe9dd3370dd7e561f!2z2K_Yp9mG2LTar9in2Ycg2KrYrti12LXbjCDZgdmG2KfZiNix24zigIzZh9in24wg2YbZiNuM2YYg2KLZhdmE!5e0!3m2!1sfa!2s!4v1737664744386!5m2!1sfa!2s"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">آدرس دفتر مرکزی خوابگاه ها</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <p>آمل, خیابان طالقانی, اباذر ۳۵ - ساختمان مرکزی</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

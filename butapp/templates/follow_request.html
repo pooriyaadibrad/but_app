@@ -16,7 +16,7 @@
         <nav class="bg-blue-950 border-gray-200 px-4 lg:px-6 py-2.5 ">
             <div class="flex flex-nowrapwrap justify-between items-center mx-auto max-w-screen-xl ">
                 <div class="flex items-center lg:order-2">
-                                            <img class="position: absolute; top: 5px; right: 5px; width: 3px; height: 3px;" src="path_to_your_3x3_logo.png" alt="لوگو">
+                        <img class="position: absolute; top: 5px; right: 5px; width: 3px; height: 3px;" src="{% static 'assest/cod-logo.svg' %}" alt="لوگو">
                            <a href="/"
                             class="text-white  hover:text-gray-300 hover:border-white focus:ring-4 focus:border focus:border-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-nowrap">
                             خانه</a>
@@ -80,6 +80,11 @@
         </div>
 
     </div>
+    <div class=" w-full mt-20  flex flex-col items-center justify-center">
+
+
+
+
     <footer class="w-full bg-blue-950 mt-20">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
@@ -91,10 +96,10 @@
                         </h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="https://flowbite.com/" class="hover:underline">قوانین و مقررات</a>
+                                <a href="{% url 'terms_and_conditions' %}" class="hover:underline">قوانین و مقررات</a>
                             </li>
                             <li>
-                                <a href="https://tailwindcss.com/" class="hover:underline">اخبار</a>
+                                <a href="#" class="hover:underline">اخبار</a>
                             </li>
                         </ul>
                     </div>
@@ -103,13 +108,13 @@
                         </h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <p>جناب آقای ابراهیم لطفی</p>
+                                <p dir="rtl">جناب آقای ابراهیم لطفی</p>
                             </li>
                             <li class="mb-4">
-                                <p>کارشناس امور خوابگاه ها</p>
+                                <p dir="rtl">کارشناس امور خوابگاه ها</p>
                             </li>
                             <li class="mb-4">
-                                <p>۰۱۱-۴۴۴۴۲۱۳۵ (داخلی ۱۴۹) <br> ۰۹۱۱-۸۵۳۴۶۷۷</p>
+                                <p dir="rtl">۰۱۱-۴۴۴۴۲۱۳۵ (داخلی ۱۴۹) <br> ۰۹۱۱-۸۵۳۴۶۷۷</p>
                             </li>
                         </ul>
                     </div>
@@ -121,10 +126,10 @@
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">آدرس دفتر مرکزی خوابگاه ها</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white" dir="rtl">آدرس دفتر مرکزی خوابگاه ها</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <p>آمل, خیابان طالقانی, اباذر ۳۵ - ساختمان مرکزی</p>
+                                <p dir="rtl">آمل, خیابان طالقانی, اباذر ۳۵ - ساختمان مرکزی</p>
                             </li>
                         </ul>
                     </div>
@@ -138,7 +143,6 @@
         </div>
     </footer>
     </div>
-
 
 </body>
 

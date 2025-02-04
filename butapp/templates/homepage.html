@@ -18,7 +18,7 @@
 
                     <div class="flex items-center lg:order-2">
 
-                        <img class="position: absolute; top: 5px; right: 5px; width: 3px; height: 3px;" src="path_to_your_3x3_logo.png" alt="لوگو">
+                        <img class="position: absolute; top: 5px; right: 5px; width: 3px; height: 3px;" src="{% static 'assest/cod-logo.svg' %}" alt="لوگو">
 
                         <a href="/register/"
                             class="text-white  hover:text-gray-300 hover:border-white focus:ring-4 focus:border focus:border-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-nowrap">فرم
@@ -121,10 +121,10 @@
                         </h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="https://flowbite.com/" class="hover:underline">قوانین و مقررات</a>
+                                <a href="{% url 'terms_and_conditions' %}" class="hover:underline">قوانین و مقررات</a>
                             </li>
                             <li>
-                                <a href="https://tailwindcss.com/" class="hover:underline">اخبار</a>
+                                <a href="" class="hover:underline">اخبار</a>
                             </li>
                         </ul>
                     </div>
