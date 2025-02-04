@@ -20,7 +20,6 @@ class StudentDormitoryAdmin(admin.ModelAdmin):
         'grade',
         'field',
         'gender',
-        'but__name',
         'date',
     )
     search_fields = (
@@ -48,7 +47,6 @@ class StudentDormitoryAdmin(admin.ModelAdmin):
         'grade',
         'field',
         'gender',
-        'but__name',
         'date',
     )
     ordering = ('-date',)  # Orders by most recent date first

@@ -184,43 +184,31 @@
 
 
 
-<script>
-    const slider = document.getElementById('slider');
-    const slides = slider.children;
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
-    const indicators = document.querySelectorAll('[data-index]');
+ <script>
+        let slideIndex = 0;
+        const slidesContainer = document.getElementById("slides");
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
 
-    let currentIndex = 0;
+        function updateSlider() {
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === slideIndex);
+            });
+        }
 
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('bg-gray-800', index === currentIndex);
-            indicator.classList.toggle('bg-gray-500', index !== currentIndex);
-        });
-    }
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-        updateSlider();
-    });
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-        updateSlider();
-    });
-
-    indicators.forEach(indicator => {
-        indicator.addEventListener('click', () => {
-            currentIndex = parseInt(indicator.getAttribute('data-index'));
+        function moveSlide(n) {
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
             updateSlider();
-        });
-    });
+        }
 
-    // Initialize the slider
-    updateSlider();
-</script>
+        function currentSlide(n) {
+            slideIndex = n;
+            updateSlider();
+        }
+
+        updateSlider();
+    </script>
 
 </body>
 
