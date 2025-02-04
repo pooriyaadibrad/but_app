@@ -61,8 +61,8 @@ class ButAdmin(admin.ModelAdmin):
     inlines = [ImageAdmin]
 
 class CapacityAdmin(admin.ModelAdmin):
-    list_display = ('number','but__name')
-    list_display_links = ('number','but__name')
+    list_display = ('number',)
+    list_display_links = ('number',)
 
 
 
