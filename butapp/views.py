@@ -21,16 +21,16 @@ def register(request):
         parent = request.POST.get('parent')
         location = request.POST.get('location')
         student_code = request.POST.get('student_code')
+        gender = request.POST.get('gender')
         but = But.objects.get(name=but)
-
         StudentDormitory.objects.create(first_name=first_name, last_name=last_name,
                                         nation_code=nation_code, mobile_number=phone,
                                         grade=grade, but=but, parent_mobile_number=parent, location=location,
-                                        field=field, student_code=student_code)
+                                        field=field, student_code=student_code, gender=gender)
         messages.success(request, 'درخواست شما با موفقیت ثبت شد')
         return redirect('register_')
     buts = But.objects.values_list('name')
-    return render(request, 'request-khabgah.html', {'buts': buts}) \
+    return render(request, 'request-khabgah.html', {'buts': buts})
 
 def follow(request):
     if request.method == 'POST':
@@ -46,3 +46,7 @@ def detail(request, but_id):
     but = But.objects.get(id=but_id)
     remaining_capacity = but.remaining_capacity()
     return render(request, 'detail.html', {'but': but, 'remaining_capacity': remaining_capacity})
+
+
+def terms_and_conditions(request):
+    return render(request, 'terms-and-conditions.html')
