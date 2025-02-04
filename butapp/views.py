@@ -1,7 +1,6 @@
-
 from django.shortcuts import render, redirect, HttpResponse
 from django.db.models import Q
-from butapp.models import But, StudentDormitory, HomePageImage, CapacityBut
+from butapp.models import But, StudentDormitory, HomePageImage, CapacityBut, Image
 from django.contrib import messages
 
 
@@ -10,7 +9,8 @@ def index(request):
 
     home = HomePageImage.objects.all().order_by('-id')[0:3]
     if len(list(home)) != 3:
-        return HttpResponse('<h1>برای لود شدن صفحه اصلی حداقل ۳ عکس برای خوابگاه های صفحه اصلی اضافه کنید از پنل ادمین</h1>')
+        return HttpResponse(
+            '<h1>برای لود شدن صفحه اصلی حداقل ۳ عکس برای خوابگاه های صفحه اصلی اضافه کنید از پنل ادمین</h1>')
     return render(request, 'homepage.html', {'buts': buts, 'home': home})
 
 
@@ -50,5 +50,7 @@ def follow(request):
 
 def detail(request, but_id):
     but = But.objects.get(id=but_id)
+    images = Image.objects.filter(but=but)
+    print(images)
     remaining_capacity = CapacityBut.objects.get(id=but.id)
-    return render(request, 'detail.html', {'but': but, 'remaining_capacity': remaining_capacity})
+    return render(request, 'detail.html', {'but': but, 'remaining_capacity': remaining_capacity, 'images': images})
